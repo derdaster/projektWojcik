@@ -1,0 +1,1 @@
+c:\users\admin\documents\visual studio 2012\Projects\Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu procesorach\bin\Debug\Szeregowanie zadań na wielu procesorach.exe.config
