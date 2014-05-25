@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.testAlgorithms = new System.Windows.Forms.Button();
             this.testLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // testAlgorithms
             // 
-            this.button1.Location = new System.Drawing.Point(279, 303);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "TEST";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.testAlgorithms.Location = new System.Drawing.Point(279, 303);
+            this.testAlgorithms.Name = "testAlgorithms";
+            this.testAlgorithms.Size = new System.Drawing.Size(75, 23);
+            this.testAlgorithms.TabIndex = 0;
+            this.testAlgorithms.Text = "TEST";
+            this.testAlgorithms.UseVisualStyleBackColor = true;
+            this.testAlgorithms.Click += new System.EventHandler(this.testAlgorithms_Click);
             // 
             // testLabel
             // 
@@ -57,7 +57,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 338);
             this.Controls.Add(this.testLabel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.testAlgorithms);
             this.Name = "Form1";
             this.Text = "Szeregowanie zadań na wielu procesorach";
             this.ResumeLayout(false);
@@ -67,7 +67,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button testAlgorithms;
         private System.Windows.Forms.Label testLabel;
     }
 }
