@@ -9,20 +9,31 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
     class Computer : Subject
     {
         List<Task> taskList = new List<Task>();
+        List<Observer> observers = new List<Observer>();
         schedulerAlgorithm algorithm;
+        List<Processor> procList = new List<Processor>();
+        public void addTask(Task t)
+        {
+            taskList.Add(t);
+        }
+        public void addProcessor(Processor p)
+        {
+            procList.Add(p);
+        }
         public void chooseAlgoritm(int i)
         {
-            switch(i){
-                case 1: algorithm = new algorithm1(); break;
+            switch (i)
+            {
+                case 1: algorithm = new algorithmFCFS(); break;
                 case 2: algorithm = new algorithm2(); break;
                 case 3: algorithm = new algorithm3(); break;
                 case 4: algorithm = new algorithm4(); break;
-                default: algorithm = new algorithm1(); break;
+                default: algorithm = new algorithmFCFS(); break;
             }
         }
-        public void symulation()
+        public void symulate()
         {
-            algorithm.proceed(taskList);
+            algorithm.proceed(taskList, procList);
         }
         public void timer()
         {
@@ -41,8 +52,20 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
     class Processor
     {
         List<Task> taskList = new List<Task>();
-
-
+        public int endTime=0;
+        public void addTask(Task t)
+        {
+            taskList.Add(t);
+            endTime += t.getTime();
+        }
+        public int getCount()
+        {
+            return taskList.Count;
+        }
+        public void setEndTime(int x)
+        {
+            endTime += x;
+        }
     }
     class Task
     {
@@ -52,55 +75,107 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
         int startTime;
         int endTime;
         Processor closedBy;
-        public Task()
+        public Task(int time, int priority)
         {
+            this.time = time;
+            this.priority = priority;
+            this.timeLeft = time;
 
+        }
+        public void setStartTime(int x)
+        {
+            startTime=x;
+        }
+
+        public void setEndTime(int x)
+        {
+            endTime = x;
+        }
+        public void setTimeLeft(int x)
+        {
+            timeLeft = x;
+        }
+        public int getTime()
+        {
+            return time;
         }
     }
 
     interface schedulerAlgorithm
     {
-        public void proceed(List<Task> taskList);
+        void proceed(List<Task> taskList, List<Processor> procList);
     }
 
-    class algorithm1 : schedulerAlgorithm
+    class algorithmFCFS : schedulerAlgorithm
     {
-        public void schedulerAlgorithm.proceed(List<Task> taskList)
+        void schedulerAlgorithm.proceed(List<Task> taskList, List<Processor> procList)
         {
-            //do something
+            bool empty = false;
+            foreach (var task in taskList)
+            {
+                empty = false;
+                //sprawdzamy czy któryś procesor jest pusty
+                foreach (var proc in procList)
+                {
+                    if (proc.getCount() == 0)
+                    {
+                        task.setStartTime(proc.endTime);
+                        task.setEndTime(proc.endTime + task.getTime());
+                        proc.addTask(task);
+                        empty = true;
+                        break;
+                        
+                    }
+                }
+                //sortujemy procesory, i przypisujemy do tego na którym najszybciej się skończy
+                if (!empty)
+                {
+
+                    List<Processor> SortedList = procList.OrderBy(o => o.endTime).ToList();
+                    procList = SortedList;
+                    foreach (var proc in procList)
+                    {
+                        task.setStartTime(proc.endTime);
+                        task.setEndTime(proc.endTime + task.getTime());
+                        proc.addTask(task);
+                        break;
+
+                    }
+                }
+            }
+            taskList.Clear();
         }
 
     }
     class algorithm2 : schedulerAlgorithm
     {
-        public void schedulerAlgorithm.proceed(List<Task> taskList)
+        void schedulerAlgorithm.proceed(List<Task> taskList, List<Processor> procList)
         {
             //do something
         }
     }
     class algorithm3 : schedulerAlgorithm
     {
-        public void schedulerAlgorithm.proceed(List<Task> taskList)
+        void schedulerAlgorithm.proceed(List<Task> taskList, List<Processor> procList)
         {
             //do something
         }
     }
     class algorithm4 : schedulerAlgorithm
     {
-        public void schedulerAlgorithm.proceed(List<Task> taskList)
+        void schedulerAlgorithm.proceed(List<Task> taskList, List<Processor> procList)
         {
             //do something
         }
     }
     interface Observer
     {
-        public void actualise();
+        void actualise();
     }
     interface Subject
     {
-        List<Observer> observers = new List<Observer>();
-        public void addObserver();
-        public void removeObserver();
-        public void actualiseObserver();
+        void addObserver();
+        void removeObserver();
+        void actualiseObserver();
     }
 }
