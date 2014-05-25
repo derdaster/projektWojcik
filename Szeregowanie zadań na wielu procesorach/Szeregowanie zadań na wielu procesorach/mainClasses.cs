@@ -25,8 +25,8 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
             switch (i)
             {
                 case 1: algorithm = new algorithmFCFS(); break;
-                case 2: algorithm = new algorithm2(); break;
-                case 3: algorithm = new algorithm3(); break;
+                case 2: algorithm = new algorithmSJF(); break;
+                case 3: algorithm = new algorithmPriority(); break;
                 case 4: algorithm = new algorithm4(); break;
                 default: algorithm = new algorithmFCFS(); break;
             }
@@ -69,9 +69,9 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
     }
     class Task
     {
-        int time;
+        public int time;
         int timeLeft;
-        int priority;
+        public int priority;
         int startTime;
         int endTime;
         Processor closedBy;
@@ -111,6 +111,7 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
         void schedulerAlgorithm.proceed(List<Task> taskList, List<Processor> procList)
         {
             bool empty = false;
+            
             foreach (var task in taskList)
             {
                 empty = false;
@@ -147,18 +148,88 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
         }
 
     }
-    class algorithm2 : schedulerAlgorithm
+    class algorithmSJF : schedulerAlgorithm
     {
         void schedulerAlgorithm.proceed(List<Task> taskList, List<Processor> procList)
         {
-            //do something
+            bool empty = false;
+            List<Task> SortedList1 = taskList.OrderBy(o => o.time).ToList();
+            taskList = SortedList1;
+            foreach (var task in taskList)
+            {
+                empty = false;
+                //sprawdzamy czy któryś procesor jest pusty
+                foreach (var proc in procList)
+                {
+                    if (proc.getCount() == 0)
+                    {
+                        task.setStartTime(proc.endTime);
+                        task.setEndTime(proc.endTime + task.getTime());
+                        proc.addTask(task);
+                        empty = true;
+                        break;
+
+                    }
+                }
+                //sortujemy procesory, i przypisujemy do tego na którym najszybciej się skończy
+                if (!empty)
+                {
+
+                    List<Processor> SortedList = procList.OrderBy(o => o.endTime).ToList();
+                    procList = SortedList;
+                    foreach (var proc in procList)
+                    {
+                        task.setStartTime(proc.endTime);
+                        task.setEndTime(proc.endTime + task.getTime());
+                        proc.addTask(task);
+                        break;
+
+                    }
+                }
+            }
+            taskList.Clear();
         }
     }
-    class algorithm3 : schedulerAlgorithm
+    class algorithmPriority : schedulerAlgorithm
     {
         void schedulerAlgorithm.proceed(List<Task> taskList, List<Processor> procList)
         {
-            //do something
+            bool empty = false;
+            List<Task> SortedList1 = taskList.OrderBy(o => o.priority).ToList();
+            taskList = SortedList1;
+            foreach (var task in taskList)
+            {
+                empty = false;
+                //sprawdzamy czy któryś procesor jest pusty
+                foreach (var proc in procList)
+                {
+                    if (proc.getCount() == 0)
+                    {
+                        task.setStartTime(proc.endTime);
+                        task.setEndTime(proc.endTime + task.getTime());
+                        proc.addTask(task);
+                        empty = true;
+                        break;
+
+                    }
+                }
+                //sortujemy procesory, i przypisujemy do tego na którym najszybciej się skończy
+                if (!empty)
+                {
+
+                    List<Processor> SortedList = procList.OrderBy(o => o.endTime).ToList();
+                    procList = SortedList;
+                    foreach (var proc in procList)
+                    {
+                        task.setStartTime(proc.endTime);
+                        task.setEndTime(proc.endTime + task.getTime());
+                        proc.addTask(task);
+                        break;
+
+                    }
+                }
+            }
+            taskList.Clear();
         }
     }
     class algorithm4 : schedulerAlgorithm

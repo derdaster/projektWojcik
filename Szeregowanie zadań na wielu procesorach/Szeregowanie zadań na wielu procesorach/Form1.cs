@@ -49,7 +49,7 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
             c.addTask(task);
             task = new Task(3, 1);
             c.addTask(task);
-            c.chooseAlgoritm(1);
+            c.chooseAlgoritm(2);
             c.symulate();
         }
     }
