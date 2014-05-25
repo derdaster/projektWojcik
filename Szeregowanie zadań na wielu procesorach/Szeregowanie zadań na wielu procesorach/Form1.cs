@@ -15,6 +15,7 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
         Computer c = new Computer();
         Computer c2 = new Computer();
         Computer c3 = new Computer();
+        Computer c4 = new Computer();
         
         public Form1()
         {
@@ -69,10 +70,12 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
             performSimpleAlghoritmTest(c, 1);
             performSimpleAlghoritmTest(c2, 2);
             performSimpleAlghoritmTest(c3, 3);
+            performSimpleAlghoritmTest(c4, 4);
 
             string displayedText = getPerformedTestData(c,"FCFS");
             displayedText += getPerformedTestData(c2 , "SJF");
             displayedText += getPerformedTestData(c3, "Priority");
+            displayedText += getPerformedTestData(c4, "Randomized");
 
             Console.Write(displayedText);
             testLabel.Text = displayedText;

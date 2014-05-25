@@ -6,28 +6,46 @@ using System.Threading.Tasks;
 
 namespace Szeregowanie_zadań_na_wielu_procesorach
 {
+    public static class Randomizer
+    {
+        public static void Shuffle<T>(this IList<T> list)
+        {
+            Random rng = new Random();
+            int n = list.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                T value = list[k];
+                list[k] = list[n];
+                list[n] = value;
+            }
+        }
+    }
+
     class Computer : Subject
     {
         List<Task> taskList = new List<Task>();
         List<Observer> observers = new List<Observer>();
-        schedulerAlgorithm algorithm;
         List<Processor> procList = new List<Processor>();
-        public void addTask(Task t)
+        schedulerAlgorithm algorithm;
+
+        public void addTask(Task task)
         {
-            taskList.Add(t);
+            taskList.Add(task);
         }
-        public void addProcessor(Processor p)
+        public void addProcessor(Processor processor)
         {
-            procList.Add(p);
+            procList.Add(processor);
         }
-        public void chooseAlgoritm(int i)
+        public void chooseAlgoritm(int algoritm)
         {
-            switch (i)
+            switch (algoritm)
             {
                 case 1: algorithm = new algorithmFCFS(); break;
                 case 2: algorithm = new algorithmSJF(); break;
                 case 3: algorithm = new algorithmPriority(); break;
-                case 4: algorithm = new algorithm4(); break;
+                case 4: algorithm = new Randomized(); break;
                 default: algorithm = new algorithmFCFS(); break;
             }
         }
@@ -59,6 +77,7 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
             return taskList;
         }
     }
+
     class Processor
     {
         List<Task> taskList = new List<Task>();
@@ -246,11 +265,47 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
             taskList.Clear();
         }
     }
-    class algorithm4 : schedulerAlgorithm
+
+    class Randomized : schedulerAlgorithm
     {
         void schedulerAlgorithm.proceed(List<Task> taskList, List<Processor> procList)
         {
-            //do something
+            Randomizer.Shuffle(taskList);
+            bool empty = false;
+
+            foreach (var task in taskList)
+            {
+                empty = false;
+                //sprawdzamy czy któryś procesor jest pusty
+                foreach (var proc in procList)
+                {
+                    if (proc.getCount() == 0)
+                    {
+                        task.setStartTime(proc.endTime);
+                        task.setEndTime(proc.endTime + task.getTime());
+                        proc.addTask(task);
+                        empty = true;
+                        break;
+
+                    }
+                }
+                //sortujemy procesory, i przypisujemy do tego na którym najszybciej się skończy
+                if (!empty)
+                {
+
+                    List<Processor> SortedList = procList.OrderBy(o => o.endTime).ToList();
+                    procList = SortedList;
+                    foreach (var proc in procList)
+                    {
+                        task.setStartTime(proc.endTime);
+                        task.setEndTime(proc.endTime + task.getTime());
+                        proc.addTask(task);
+                        break;
+
+                    }
+                }
+            }
+            taskList.Clear();
         }
     }
     interface Observer
