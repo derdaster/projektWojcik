@@ -48,6 +48,16 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
         public void actualiseObserver()
         {
         }
+
+        public  List<Processor> getProcList()
+        {
+            return procList;
+        }
+
+        public List<Task> getTaskList()
+        {
+            return taskList;
+        }
     }
     class Processor
     {
@@ -65,6 +75,10 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
         public void setEndTime(int x)
         {
             endTime += x;
+        }
+        public List<Task> getTaskList()
+        {
+            return taskList;
         }
     }
     class Task
