@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="algorithmBruteForce.cs" />
     <Compile Include="algorithmFCFS.cs" />
     <Compile Include="algorithmPriority.cs" />
     <Compile Include="algorithmRandomized.cs" />

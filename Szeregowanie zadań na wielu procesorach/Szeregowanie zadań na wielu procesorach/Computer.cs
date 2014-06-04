@@ -27,11 +27,24 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
         {
             switch (algoritm)
             {
-                case 1: algorithm = new algorithmFCFS(); break;
-                case 2: algorithm = new algorithmSJF(); break;
-                case 3: algorithm = new algorithmPriority(); break;
-                case 4: algorithm = new Randomized(); break;
-                default: algorithm = new algorithmFCFS(); break;
+                case 1: 
+                    algorithm = new algorithmFCFS(); 
+                    break;
+                case 2: 
+                    algorithm = new algorithmSJF(); 
+                    break;
+                case 3: 
+                    algorithm = new algorithmPriority(); 
+                    break;
+                case 4: 
+                    algorithm = new Randomized(); 
+                    break;
+                case 5: 
+                    algorithm = new algorithmBruteForce(); 
+                    break;
+                default: 
+                    algorithm = new algorithmFCFS(); 
+                    break;
             }
         }
 
