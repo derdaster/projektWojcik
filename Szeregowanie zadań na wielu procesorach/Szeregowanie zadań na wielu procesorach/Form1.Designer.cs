@@ -34,7 +34,7 @@
             // 
             // testAlgorithms
             // 
-            this.testAlgorithms.Location = new System.Drawing.Point(279, 303);
+            this.testAlgorithms.Location = new System.Drawing.Point(279, 446);
             this.testAlgorithms.Name = "testAlgorithms";
             this.testAlgorithms.Size = new System.Drawing.Size(75, 23);
             this.testAlgorithms.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 338);
+            this.ClientSize = new System.Drawing.Size(366, 481);
             this.Controls.Add(this.testLabel);
             this.Controls.Add(this.testAlgorithms);
             this.Name = "Form1";

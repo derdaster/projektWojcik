@@ -13,7 +13,7 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
             c.addProcessor(new Processor());
             c.addProcessor(new Processor());
             c.addProcessor(new Processor());
-            //c.addProcessor(new Processor());
+            c.addProcessor(new Processor());
 
             c.addTask(new Task(5, 1));
             c.addTask(new Task(4, 2));
@@ -22,9 +22,9 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
             c.addTask(new Task(7, 1));
             c.addTask(new Task(1, 5));
             c.addTask(new Task(3, 1));
-            //c.addTask(new Task(3, 2));
-            //c.addTask(new Task(3, 1));
-            //c.addTask(new Task(3, 9));
+            c.addTask(new Task(3, 2));
+            c.addTask(new Task(3, 1));
+            c.addTask(new Task(3, 9));
             c.chooseAlgoritm(alghoritm);
             c.symulate();
         }

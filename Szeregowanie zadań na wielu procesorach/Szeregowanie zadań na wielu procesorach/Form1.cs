@@ -30,12 +30,13 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
             Tester.performSimpleAlghoritmTest(c2, 2);
             Tester.performSimpleAlghoritmTest(c3, 3);
             Tester.performSimpleAlghoritmTest(c4, 4);
-            //Tester.performSimpleAlghoritmTest(c5, 5);
+            Tester.performSimpleAlghoritmTest(c5, 5);
 
             string displayedText = Tester.getPerformedTestData(c, "FCFS");
             displayedText += Tester.getPerformedTestData(c2, "SJF");
             displayedText += Tester.getPerformedTestData(c3, "Priority");
             displayedText += Tester.getPerformedTestData(c4, "Randomized");
+            displayedText += Tester.getPerformedTestData(c5, "BruteForcePowa");
 
             Console.Write(displayedText);
             testLabel.Text = displayedText;

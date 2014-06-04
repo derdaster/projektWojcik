@@ -16,3 +16,4 @@ C:\ASDF\Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu pr
 C:\ASDF\Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu procesorach\obj\Debug\Szeregowanie_zadań_na_wielu_procesorach.Form1.resources
 C:\ASDF\Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu procesorach\obj\Debug\Szeregowanie_zadań_na_wielu_procesorach.Properties.Resources.resources
 C:\ASDF\Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu procesorach\obj\Debug\Szeregowanie zadań na wielu procesorach.csproj.GenerateResource.Cache
+C:\ASDF\Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu procesorach\obj\Debug\Szeregowanie zadań na wielu procesorach.csprojResolveAssemblyReference.cache
