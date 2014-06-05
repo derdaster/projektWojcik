@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Szeregowanie zadań na wielu procesorach", "Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu procesorach.csproj", "{854632CD-0EB3-44B4-969B-BFE55C855EE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyChart", "MyChart\MyChart.csproj", "{1E14BE1A-A01C-4496-AD1F-3BD5E6CB4979}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{854632CD-0EB3-44B4-969B-BFE55C855EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{854632CD-0EB3-44B4-969B-BFE55C855EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{854632CD-0EB3-44B4-969B-BFE55C855EE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E14BE1A-A01C-4496-AD1F-3BD5E6CB4979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E14BE1A-A01C-4496-AD1F-3BD5E6CB4979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E14BE1A-A01C-4496-AD1F-3BD5E6CB4979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E14BE1A-A01C-4496-AD1F-3BD5E6CB4979}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
