@@ -15,16 +15,16 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
             c.addProcessor(new Processor());
             c.addProcessor(new Processor());
 
-            c.addTask(new Task(5, 1));
-            c.addTask(new Task(4, 2));
-            c.addTask(new Task(4, 1));
-            c.addTask(new Task(2, 3));
-            c.addTask(new Task(7, 1));
-            c.addTask(new Task(1, 5));
-            c.addTask(new Task(3, 1));
-            c.addTask(new Task(3, 2));
-            c.addTask(new Task(3, 1));
-            c.addTask(new Task(3, 9));
+            c.addTask(new Task(5, Priority.Low ));
+            c.addTask(new Task(4, Priority.Medium));
+            c.addTask(new Task(4, Priority.VeryLow));
+            c.addTask(new Task(2, Priority.Medium));
+            c.addTask(new Task(7, Priority.VeryHeight));
+            c.addTask(new Task(1, Priority.Low));
+            c.addTask(new Task(3, Priority.VeryHeight));
+            c.addTask(new Task(3, Priority.Medium));
+            c.addTask(new Task(3, Priority.VeryLow));
+            c.addTask(new Task(3, Priority.Height));
             c.chooseAlgoritm(alghoritm);
             c.symulate();
         }

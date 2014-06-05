@@ -62,7 +62,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProcessorTask.cs" />
     <Compile Include="TasksChart.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -93,6 +92,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu procesorach.csproj">
+      <Project>{854632cd-0eb3-44b4-969b-bfe55c855ee4}</Project>
+      <Name>Szeregowanie zadań na wielu procesorach</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

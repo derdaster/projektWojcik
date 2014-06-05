@@ -26,7 +26,7 @@ namespace MyChart
         {
             if (ListOfTasks.Count > 0)
             {
-                ProcessorTask myTask = ListOfTasks[0];
+                Szeregowanie_zadań_na_wielu_procesorach.Task myTask = ListOfTasks[0];
 
                 int yLeftTopPoint = LeftBottomCorner.Y - (int)((float)myTask.time * yScale);
                 SolidBrush fillOfTaskBrush = new SolidBrush(GetColorOfTask(myTask));

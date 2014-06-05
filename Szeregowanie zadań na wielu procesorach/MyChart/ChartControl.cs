@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Szeregowanie_zadań_na_wielu_procesorach;
 
 namespace MyChart
 {
     public partial class ChartControl : Panel
     {
-        public List<ProcessorTask> ListOfTasks = new List<ProcessorTask>();
+        public List<Szeregowanie_zadań_na_wielu_procesorach.Task> ListOfTasks = new List<Szeregowanie_zadań_na_wielu_procesorach.Task>();
 
         public int xLine = 0;
         public int yLine = 0;
@@ -129,7 +130,7 @@ namespace MyChart
         }
 
 
-        public void Update(List<ProcessorTask> lTasks)
+        public void Update(List<Szeregowanie_zadań_na_wielu_procesorach.Task> lTasks)
         {
             this.ListOfTasks.Clear();
             this.ListOfTasks.AddRange(lTasks);
@@ -151,7 +152,7 @@ namespace MyChart
             return max;
         }
 
-        protected Color GetColorOfTask(ProcessorTask task)
+        protected Color GetColorOfTask(Szeregowanie_zadań_na_wielu_procesorach.Task task)
         {
             switch(task.priority)
                          {
