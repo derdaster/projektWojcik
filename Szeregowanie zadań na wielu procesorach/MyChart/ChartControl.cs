@@ -156,7 +156,7 @@ namespace MyChart
         {
             switch(task.priority)
                          {
-                             case Priority.Height:
+                             case Priority.Heigh:
                                  {
                                      return Color.OrangeRed;
                                      
@@ -169,7 +169,7 @@ namespace MyChart
                                  {
                                      return Color.Yellow;
                                  }
-                             case Priority.VeryHeight:
+                             case Priority.VeryHeigh:
                                  {
                                      return Color.Red;
                                  }

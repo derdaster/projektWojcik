@@ -1,6 +1,5 @@
 c:\users\admin\documents\visual studio 2012\Projects\Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu procesorach\bin\Debug\Szeregowanie zadań na wielu procesorach.exe.config
 C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu procesorach\bin\Debug\Szeregowanie zadań na wielu procesorach.exe.config
-C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu procesorach\obj\Debug\Szeregowanie zadań na wielu procesorach.csprojResolveAssemblyReference.cache
 C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu procesorach\obj\Debug\Szeregowanie_zadań_na_wielu_procesorach.Properties.Resources.resources
 C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu procesorach\obj\Debug\Szeregowanie zadań na wielu procesorach.csproj.GenerateResource.Cache
 C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu procesorach\bin\Debug\Szeregowanie zadań na wielu procesorach.exe
@@ -26,3 +25,4 @@ C:\Users\Mateusz\Documents\Visual Studio 2012\Projects\ProjetkWojcik\Szeregowani
 C:\Users\Mateusz\Documents\Visual Studio 2012\Projects\ProjetkWojcik\Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu procesorach\obj\Debug\Szeregowanie_zadań_na_wielu_procesorach.Form1.resources
 C:\Users\Mateusz\Documents\Visual Studio 2012\Projects\ProjetkWojcik\Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu procesorach\obj\Debug\Szeregowanie_zadań_na_wielu_procesorach.Properties.Resources.resources
 C:\Users\Mateusz\Documents\Visual Studio 2012\Projects\ProjetkWojcik\Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu procesorach\obj\Debug\Szeregowanie zadań na wielu procesorach.csproj.GenerateResource.Cache
+C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\Szeregowanie zadań na wielu procesorach\obj\Debug\Szeregowanie zadań na wielu procesorach.csprojResolveAssemblyReference.cache

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Szeregowanie_zadań_na_wielu_procesorach
 {
-    public enum Priority { VeryLow, Low, Medium, Height, VeryHeight };
+    public enum Priority { VeryLow, Low, Medium, Heigh, VeryHeigh };
 
     public class Task : IEquatable<Task>, IComparable<Task>
     {
@@ -26,6 +26,16 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
             this.timeLeft = time;
             counter++;
             Id = counter;
+
+        }
+        public Task(int time, Priority priority, int sTime)
+        {
+            this.time = time;
+            this.priority = priority;
+            this.timeLeft = time;
+            counter++;
+            Id = counter;
+            this.startTime = sTime;
 
         }
 
@@ -48,8 +58,19 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
         {
             return time;
         }
-
-        Int64 GetId()
+        public int getEndTime()
+        {
+            return endTime;
+        }
+        public int getStartTime()
+        {
+            return startTime;
+        }
+        public int getTimeLeft()
+        {
+            return timeLeft;
+        }
+        public Int64 GetId()
         {
             return Id;
         }

@@ -14,7 +14,7 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
         public void addTask(Task t)
         {
             taskList.Add(t);
-            endTime += t.getTime();
+            endTime = t.getEndTime();
         }
 
         public int getCount()
@@ -30,6 +30,11 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
         public List<Task> getTaskList()
         {
             return taskList;
+        }
+
+        internal void setTaskList(List<Task> allTasksForSingleProcessor)
+        {
+            taskList = allTasksForSingleProcessor;
         }
     }
 }

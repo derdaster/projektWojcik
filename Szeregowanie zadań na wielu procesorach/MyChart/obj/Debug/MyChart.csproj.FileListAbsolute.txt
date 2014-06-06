@@ -20,3 +20,15 @@ C:\Users\Mateusz\Documents\Visual Studio 2012\Projects\ProjetkWojcik\Szeregowani
 C:\Users\Mateusz\Documents\Visual Studio 2012\Projects\ProjetkWojcik\Szeregowanie zadań na wielu procesorach\MyChart\bin\Debug\MyChart.pdb
 C:\Users\Mateusz\Documents\Visual Studio 2012\Projects\ProjetkWojcik\Szeregowanie zadań na wielu procesorach\MyChart\bin\Debug\Szeregowanie zadań na wielu procesorach.exe
 C:\Users\Mateusz\Documents\Visual Studio 2012\Projects\ProjetkWojcik\Szeregowanie zadań na wielu procesorach\MyChart\bin\Debug\Szeregowanie zadań na wielu procesorach.pdb
+C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\MyChart\bin\Debug\MyChart.exe.config
+C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\MyChart\obj\Debug\MyChart.exe
+C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\MyChart\obj\Debug\MyChart.pdb
+C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\MyChart\bin\Debug\MyChart.exe
+C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\MyChart\bin\Debug\MyChart.pdb
+C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\MyChart\bin\Debug\Szeregowanie zadań na wielu procesorach.exe
+C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\MyChart\bin\Debug\Szeregowanie zadań na wielu procesorach.pdb
+C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\MyChart\obj\Debug\MyChart.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\MyChart\obj\Debug\MyChart.ChartControl.resources
+C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\MyChart\obj\Debug\MyChart.Form1.resources
+C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\MyChart\obj\Debug\MyChart.Properties.Resources.resources
+C:\Users\admin\Documents\GitHub\projektWojcik\Szeregowanie zadań na wielu procesorach\MyChart\obj\Debug\MyChart.csproj.GenerateResource.Cache

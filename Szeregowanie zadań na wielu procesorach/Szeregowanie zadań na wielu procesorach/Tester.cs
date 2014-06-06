@@ -14,19 +14,20 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
             c.addProcessor(new Processor());
             c.addProcessor(new Processor());
             c.addProcessor(new Processor());
-
-            c.addTask(new Task(5, Priority.Low ));
-            c.addTask(new Task(4, Priority.Medium));
-            c.addTask(new Task(4, Priority.VeryLow));
-            c.addTask(new Task(2, Priority.Medium));
-            c.addTask(new Task(7, Priority.VeryHeight));
-            c.addTask(new Task(1, Priority.Low));
-            c.addTask(new Task(3, Priority.VeryHeight));
-            c.addTask(new Task(3, Priority.Medium));
-            c.addTask(new Task(3, Priority.VeryLow));
-            c.addTask(new Task(3, Priority.Height));
+            
+            c.addTask(new Task(5, Priority.Low,1));
+            c.addTask(new Task(4, Priority.Medium,2));
+            c.addTask(new Task(4, Priority.VeryLow,3));
+            c.addTask(new Task(2, Priority.Medium,4));
+            c.addTask(new Task(7, Priority.VeryHeigh,5));
+            c.addTask(new Task(1, Priority.Low,1));
+            c.addTask(new Task(3, Priority.VeryHeigh,2));
+            c.addTask(new Task(3, Priority.Medium,3));
+            c.addTask(new Task(3, Priority.VeryLow,4));
+            c.addTask(new Task(3, Priority.Heigh,1));
             c.chooseAlgoritm(alghoritm);
             c.symulate();
+            c.symulateInTime();
         }
 
         public static string getPerformedTestData(Computer c, string name)
@@ -43,9 +44,10 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
                 List<Task> allTasksForSingleProcessor = processor.getTaskList();
                 foreach (var task in allTasksForSingleProcessor)
                 {
-                    displayedText += " [" + task.getTime().ToString() + " p" + task.priority.ToString() + "] ";
+                    displayedText += " [" + task.getTime().ToString() + " p" + task.priority.ToString() + " s" + task.getStartTime() + "] " + task.getEndTime()+" ";
                 }
-                displayedText += "\n";
+                displayedText += processor.endTime;
+                displayedText += " \n";
                 i++;
             }
             return displayedText + "\n";

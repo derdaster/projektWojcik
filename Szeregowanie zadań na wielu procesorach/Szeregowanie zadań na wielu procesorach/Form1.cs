@@ -17,6 +17,7 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
         Computer c3 = new Computer();
         Computer c4 = new Computer();
         Computer c5 = new Computer();
+        
 
         public Form1()
         {
@@ -25,6 +26,7 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
 
         private void testAlgorithms_Click(object sender, EventArgs e)
         {
+            
             testLabel.Size = new Size(200, 200);
             Tester.performSimpleAlghoritmTest(c, 1);
             Tester.performSimpleAlghoritmTest(c2, 2);

@@ -10,12 +10,14 @@ using System.Windows.Forms;
 
 namespace MyChart
 {
+    
     public partial class Form1 : Form
     {
+        
         List<Szeregowanie_zadań_na_wielu_procesorach.Task> MainList = new List<Szeregowanie_zadań_na_wielu_procesorach.Task>();
         List<Szeregowanie_zadań_na_wielu_procesorach.Task> Procesor1List = new List<Szeregowanie_zadań_na_wielu_procesorach.Task>();
         int j = 1;
-
+        Szeregowanie_zadań_na_wielu_procesorach.Task tempTask;
         public Form1()
         {
             InitializeComponent();
@@ -41,11 +43,17 @@ namespace MyChart
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-
+            if (tempTask!=null && tempTask.getTimeLeft() > 0)
+            {
+                tempTask.setTimeLeft(tempTask.getTimeLeft()-1);
+                Procesor1List.RemoveAt(0);
+                Procesor1List.Add(tempTask);
+            }
+            else
             if (MainList.Count > 0)
             {
                 Procesor1List.Add(this.MainList[0]);
+                tempTask = this.MainList[0];
                 this.MainList.RemoveAt(0);
             }
             this.panel1.Update(MainList);

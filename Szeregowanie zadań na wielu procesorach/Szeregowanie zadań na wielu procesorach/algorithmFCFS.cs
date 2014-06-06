@@ -11,7 +11,8 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
         void schedulerAlgorithm.proceed(List<Task> taskList, List<Processor> procList)
         {
             bool empty = false;
-
+            List<Task> SortedList1 = taskList.OrderBy(o => o.getStartTime()).ToList();
+            taskList = SortedList1;
             foreach (var task in taskList)
             {
                 empty = false;
@@ -20,8 +21,8 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
                 {
                     if (proc.getCount() == 0)
                     {
-                        task.setStartTime(proc.endTime);
-                        task.setEndTime(proc.endTime + task.getTime());
+                        //task.setStartTime(proc.endTime);
+                        task.setEndTime(proc.endTime + task.getTime()+task.getStartTime());
                         proc.addTask(task);
                         empty = true;
                         break;
@@ -35,14 +36,21 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
                     procList = SortedList;
                     foreach (var proc in procList)
                     {
-                        task.setStartTime(proc.endTime);
-                        task.setEndTime(proc.endTime + task.getTime());
+                        //task.setStartTime(proc.endTime);
+                        if (proc.endTime >= task.getStartTime())
+                        {
+                            task.setEndTime(proc.endTime + task.getTime());
+                        }
+                        else
+                        {
+                            task.setEndTime(task.getStartTime() + task.getTime());
+                        }
                         proc.addTask(task);
                         break;
                     }
                 }
             }
-            taskList.Clear();
+            //taskList.Clear();
         }
     }
 }

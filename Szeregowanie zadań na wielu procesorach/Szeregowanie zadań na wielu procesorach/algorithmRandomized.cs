@@ -22,8 +22,7 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
                 {
                     if (proc.getCount() == 0)
                     {
-                        task.setStartTime(proc.endTime);
-                        task.setEndTime(proc.endTime + task.getTime());
+                        task.setEndTime(proc.endTime + task.getTime() + task.getStartTime());
                         proc.addTask(task);
                         empty = true;
                         break;
@@ -37,14 +36,20 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
                     procList = SortedList;
                     foreach (var proc in procList)
                     {
-                        task.setStartTime(proc.endTime);
-                        task.setEndTime(proc.endTime + task.getTime());
+                        if (proc.endTime >= task.getStartTime())
+                        {
+                            task.setEndTime(proc.endTime + task.getTime());
+                        }
+                        else
+                        {
+                            task.setEndTime(task.getStartTime() + task.getTime());
+                        }
                         proc.addTask(task);
                         break;
                     }
                 }
             }
-            taskList.Clear();
+            //taskList.Clear();
         }
     }
 }
