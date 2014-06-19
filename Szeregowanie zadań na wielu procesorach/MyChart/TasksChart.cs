@@ -29,7 +29,7 @@ namespace MyChart
 
             foreach (var task in ListOfTasks)
             {
-                int yLeftTopPoint = LeftBottomCorner.Y - (int)((float)task.time * yScale);
+                int yLeftTopPoint = LeftBottomCorner.Y - (int)((float)task.getTimeLeft() * yScale);
                 SolidBrush fillOfTaskBrush = new SolidBrush(GetColorOfTask(task));
 
                 int stepToscroll = (columnWithAndSpace / 2);
@@ -39,7 +39,7 @@ namespace MyChart
                     if (LeftBottomCorner.X + interval - scrollBarPosition * stepToscroll + columnWith < LeftBottomCorner.X + xLine)
                     {
                         graph.FillRectangle(fillOfTaskBrush, new Rectangle(LeftBottomCorner.X + interval - scrollBarPosition * stepToscroll, yLeftTopPoint, columnWith, LeftBottomCorner.Y - yLeftTopPoint));
-                        graph.DrawString(task.time.ToString(), new System.Drawing.Font(FontFamily.GenericSerif, 12), textBrush, new PointF(LeftBottomCorner.X + interval - scrollBarPosition * stepToscroll + columnWith / 2, LeftBottomCorner.Y + 10));
+                        graph.DrawString(task.getStartTime().ToString(), new System.Drawing.Font(FontFamily.GenericSerif, 12), textBrush, new PointF(LeftBottomCorner.X + interval - scrollBarPosition * stepToscroll + columnWith / 2, LeftBottomCorner.Y + 10));
                     }
                     else
                     {
@@ -47,7 +47,7 @@ namespace MyChart
                         if (LeftBottomCorner.X + interval - scrollBarPosition * stepToscroll < LeftBottomCorner.X + xLine)
                         {
                             graph.FillRectangle(fillOfTaskBrush, new Rectangle(LeftBottomCorner.X + interval - scrollBarPosition * stepToscroll, yLeftTopPoint, (RightBottomCorner.X - (LeftBottomCorner.X + interval - scrollBarPosition * stepToscroll)), LeftBottomCorner.Y - yLeftTopPoint));
-                            graph.DrawString(task.time.ToString(), new System.Drawing.Font(FontFamily.GenericSerif, 6), textBrush, new PointF(RightBottomCorner.X, LeftBottomCorner.Y + 10));
+                            graph.DrawString(task.getStartTime().ToString(), new System.Drawing.Font(FontFamily.GenericSerif, 6), textBrush, new PointF(RightBottomCorner.X, LeftBottomCorner.Y + 10));
                         }
                     
                     }

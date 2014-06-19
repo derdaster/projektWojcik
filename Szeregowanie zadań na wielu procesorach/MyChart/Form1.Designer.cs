@@ -32,14 +32,16 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.counterTask = new System.Windows.Forms.Label();
-            this.panel1 = new TasksChart();
-            this.panel2 = new ProcessorChart();
-            this.panel3 = new ProcessorChart();
-            this.panel4 = new TasksChart();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel4 = new MyChart.TasksChart();
+            this.panel3 = new MyChart.ProcessorChart();
+            this.panel2 = new MyChart.ProcessorChart();
+            this.panel1 = new MyChart.TasksChart();
+            this.processorChart1 = new MyChart.ProcessorChart();
+            this.processorChart2 = new MyChart.ProcessorChart();
             this.SuspendLayout();
             // 
             // button1
@@ -82,34 +84,6 @@
             this.counterTask.Text = "0";
             this.counterTask.Click += new System.EventHandler(this.label2_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(39, 44);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(530, 165);
-            this.panel1.TabIndex = 6;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(673, 44);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 165);
-            this.panel2.TabIndex = 7;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(917, 44);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 165);
-            this.panel3.TabIndex = 8;
-            // 
-            // panel4
-            // 
-            this.panel4.Location = new System.Drawing.Point(39, 283);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(530, 165);
-            this.panel4.TabIndex = 9;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -146,11 +120,62 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Procesor2";
             // 
+            // panel4
+            // 
+            this.panel4.AutoSize = true;
+            this.panel4.Location = new System.Drawing.Point(39, 283);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(530, 165);
+            this.panel4.TabIndex = 9;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.AutoSize = true;
+            this.panel3.Location = new System.Drawing.Point(917, 44);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 165);
+            this.panel3.TabIndex = 8;
+            // 
+            // panel2
+            // 
+            this.panel2.AutoSize = true;
+            this.panel2.Location = new System.Drawing.Point(673, 44);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 165);
+            this.panel2.TabIndex = 7;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSize = true;
+            this.panel1.Location = new System.Drawing.Point(39, 44);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(530, 165);
+            this.panel1.TabIndex = 6;
+            // 
+            // processorChart1
+            // 
+            this.processorChart1.AutoSize = true;
+            this.processorChart1.Location = new System.Drawing.Point(917, 243);
+            this.processorChart1.Name = "processorChart1";
+            this.processorChart1.Size = new System.Drawing.Size(200, 165);
+            this.processorChart1.TabIndex = 15;
+            // 
+            // processorChart2
+            // 
+            this.processorChart2.AutoSize = true;
+            this.processorChart2.Location = new System.Drawing.Point(673, 243);
+            this.processorChart2.Name = "processorChart2";
+            this.processorChart2.Size = new System.Drawing.Size(200, 165);
+            this.processorChart2.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1272, 524);
+            this.Controls.Add(this.processorChart1);
+            this.Controls.Add(this.processorChart2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -176,14 +201,16 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label counterTask;
-        private ChartControl panel1;
-        private ChartControl panel2;
-        private ChartControl panel3;
-        private ChartControl panel4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private TasksChart panel1;
+        private ProcessorChart panel2;
+        private ProcessorChart panel3;
+        private TasksChart panel4;
+        private ProcessorChart processorChart1;
+        private ProcessorChart processorChart2;
     }
 }
 

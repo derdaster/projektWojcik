@@ -48,7 +48,7 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
                     break;
             }
         }
-        public void symulateInTime()
+        public void symulateInTime(List<List<Task>> lista)
         {
             
             clearFile();
@@ -59,7 +59,7 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
             //dla każdego tasku po kolei na procesorze zmiejsza czas time left do 0
 
             //taskList-przechowuje zadania oczekujące
-            List<List<Task>> lista = new List<List<Task>>();//lista zadań aktualnie przetwarzanych na procesorze
+            //List<List<Task>> lista = new List<List<Task>>();//lista zadań aktualnie przetwarzanych na procesorze
             for (int n = 0; n < procList.Count; n++)
             {
                 lista.Add(new List<Task>());
@@ -228,7 +228,57 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
 
             using (var stream = File.Create(path)) { }
         }
+        public void wczytaj()
+        {
+            string path = @"dane.txt";
+            //string x = File.ReadAllText(@"dane.txt");
+            string x;
+            if (File.Exists(path))
+            {
+                /*
+                TextReader tw = new StreamReader(path, true);
+                while (x = tw.ReadLine())
+                {
 
+                }
+                x = tw.ReadLine();
+                tw.Close();*/
+                string line;
+                string []words;
+                System.IO.StreamReader file =
+   new System.IO.StreamReader(path);
+                int counter = 0;
+                while ((line = file.ReadLine()) != null)
+                {
+                    if (!line.Substring(0, 1).Equals("#"))
+                    {
+                        words = line.Split('\t');
+                        counter++;
+                        if (counter == 1)
+                        {
+                            for (int i = 0; i < Int32.Parse(words[0]); i++)
+                                this.addProcessor(new Processor());
+                        }
+                        else
+                        {
+                            Priority p=new Priority();
+                            switch(Int32.Parse(words[1]))
+                            {
+                                case 1: p=Priority.VeryHigh; break;
+                                case 2: p=Priority.High; break;
+                                case 3: p=Priority.Medium; break;
+                                case 4: p=Priority.Low; break;
+                                case 5: p=Priority.VeryLow; break;
+
+                            }
+                            this.addTask(new Task(Int32.Parse(words[0]),p,Int32.Parse(words[2])));
+                        }
+                    }
+                    
+                }
+            }
+
+        }
         public void symulate()
         {
             algorithm.proceed(taskList, procList);
@@ -265,5 +315,6 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
         {
             taskList = lista;
         }
+
     }
 }

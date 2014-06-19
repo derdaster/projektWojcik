@@ -1,7 +1,7 @@
 
-number of processors: 4
+number of processors: 2
 
-liczba tasków: 10
+liczba tasków: 8
 
 zakończone: 0
 
@@ -9,74 +9,64 @@ sekunda: 1
 
 przetwarzane: 0
 
-processor 0:  [1 l1 s1] 2  [3 l3 s4] 7  [5 l5 s1] 12 
-processor 1:  [2 l2 s4] 6  [4 l4 s2] 10 
-processor 2:  [3 l3 s2] 5  [3 l3 s1] 8  [7 l7 s5] 15 
-processor 3:  [3 l3 s3] 6  [4 l4 s3] 10 
+processor 0:  [1 l1 s3] 4  [1 l1 s3] 5  [2 l2 s4] 7  [2 l2 s4] 9 
+processor 1:  [1 l1 s3] 4  [1 l1 s3] 5  [2 l2 s4] 7  [2 l2 s4] 9 
 
-number of processors: 4
+number of processors: 2
 
-liczba tasków: 9
+liczba tasków: 8
 
-zakończone: 1
+zakończone: 0
 
 sekunda: 2
 
 przetwarzane: 0
 
-processor 0:  [3 l3 s4] 7  [5 l5 s1] 12 
-processor 1:  [2 l2 s4] 6  [4 l4 s2] 10 
-processor 2:  [3 l3 s2] 5  [3 l3 s1] 8  [7 l7 s5] 15 
-processor 3:  [3 l3 s3] 6  [4 l4 s3] 10 
+processor 0:  [1 l1 s3] 4  [1 l1 s3] 5  [2 l2 s4] 7  [2 l2 s4] 9 
+processor 1:  [1 l1 s3] 4  [1 l1 s3] 5  [2 l2 s4] 7  [2 l2 s4] 9 
 
-number of processors: 4
+number of processors: 2
 
 liczba tasków: 8
 
-zakończone: 1
+zakończone: 0
 
 sekunda: 3
 
-przetwarzane: 1
+przetwarzane: 0
 
-processor 0:  [3 l3 s4] 7  [5 l5 s1] 12 
-processor 1:  [2 l2 s4] 6  [4 l4 s2] 10 
-processor 2:  [3 l2 s2] 5  [3 l3 s1] 8  [7 l7 s5] 15 
-processor 3:  [3 l3 s3] 6  [4 l4 s3] 10 
+processor 0:  [1 l1 s3] 4  [1 l1 s3] 5  [2 l2 s4] 7  [2 l2 s4] 9 
+processor 1:  [1 l1 s3] 4  [1 l1 s3] 5  [2 l2 s4] 7  [2 l2 s4] 9 
 
-number of processors: 4
+number of processors: 2
 
-liczba tasków: 7
-
-zakończone: 1
-
-sekunda: 4
-
-przetwarzane: 2
-
-processor 0:  [3 l3 s4] 7  [5 l5 s1] 12 
-processor 1:  [2 l2 s4] 6  [4 l4 s2] 10 
-processor 2:  [3 l1 s2] 5  [3 l3 s1] 8  [7 l7 s5] 15 
-processor 3:  [3 l2 s3] 6  [4 l4 s3] 10 
-
-number of processors: 4
-
-liczba tasków: 5
+liczba tasków: 6
 
 zakończone: 2
 
-sekunda: 5
+sekunda: 4
 
-przetwarzane: 3
+przetwarzane: 0
 
-processor 0:  [3 l2 s4] 7  [5 l5 s1] 12 
-processor 1:  [2 l1 s4] 6  [4 l4 s2] 10 
-processor 2:  [3 l3 s1] 8  [7 l7 s5] 15 
-processor 3:  [3 l1 s3] 6  [4 l4 s3] 10 
+processor 0:  [1 l1 s3] 5  [2 l2 s4] 7  [2 l2 s4] 9 
+processor 1:  [1 l1 s3] 5  [2 l2 s4] 7  [2 l2 s4] 9 
 
-number of processors: 4
+number of processors: 2
 
 liczba tasków: 4
+
+zakończone: 4
+
+sekunda: 5
+
+przetwarzane: 0
+
+processor 0:  [2 l2 s4] 7  [2 l2 s4] 9 
+processor 1:  [2 l2 s4] 7  [2 l2 s4] 9 
+
+number of processors: 2
+
+liczba tasków: 2
 
 zakończone: 4
 
@@ -84,142 +74,44 @@ sekunda: 6
 
 przetwarzane: 2
 
-processor 0:  [3 l1 s4] 7  [5 l5 s1] 12 
-processor 1:  [4 l4 s2] 10 
-processor 2:  [3 l2 s1] 8  [7 l7 s5] 15 
-processor 3:  [4 l4 s3] 10 
+processor 0:  [2 l1 s4] 7  [2 l2 s4] 9 
+processor 1:  [2 l1 s4] 7  [2 l2 s4] 9 
 
-number of processors: 4
+number of processors: 2
 
 liczba tasków: 2
 
-zakończone: 5
+zakończone: 6
 
 sekunda: 7
 
-przetwarzane: 3
+przetwarzane: 0
 
-processor 0:  [5 l5 s1] 12 
-processor 1:  [4 l3 s2] 10 
-processor 2:  [3 l1 s1] 8  [7 l7 s5] 15 
-processor 3:  [4 l3 s3] 10 
+processor 0:  [2 l2 s4] 9 
+processor 1:  [2 l2 s4] 9 
 
-number of processors: 4
+number of processors: 2
 
-liczba tasków: 1
+liczba tasków: 0
 
 zakończone: 6
 
 sekunda: 8
 
-przetwarzane: 3
+przetwarzane: 2
 
-processor 0:  [5 l4 s1] 12 
-processor 1:  [4 l2 s2] 10 
-processor 2:  [7 l7 s5] 15 
-processor 3:  [4 l2 s3] 10 
+processor 0:  [2 l1 s4] 9 
+processor 1:  [2 l1 s4] 9 
 
-number of processors: 4
+number of processors: 2
 
 liczba tasków: 0
 
-zakończone: 6
+zakończone: 8
 
 sekunda: 9
-
-przetwarzane: 4
-
-processor 0:  [5 l3 s1] 12 
-processor 1:  [4 l1 s2] 10 
-processor 2:  [7 l6 s5] 15 
-processor 3:  [4 l1 s3] 10 
-
-number of processors: 4
-
-liczba tasków: 0
-
-zakończone: 8
-
-sekunda: 10
-
-przetwarzane: 2
-
-processor 0:  [5 l2 s1] 12 
-processor 1: 
-processor 2:  [7 l5 s5] 15 
-processor 3: 
-
-number of processors: 4
-
-liczba tasków: 0
-
-zakończone: 8
-
-sekunda: 11
-
-przetwarzane: 2
-
-processor 0:  [5 l1 s1] 12 
-processor 1: 
-processor 2:  [7 l4 s5] 15 
-processor 3: 
-
-number of processors: 4
-
-liczba tasków: 0
-
-zakończone: 9
-
-sekunda: 12
-
-przetwarzane: 1
-
-processor 0: 
-processor 1: 
-processor 2:  [7 l3 s5] 15 
-processor 3: 
-
-number of processors: 4
-
-liczba tasków: 0
-
-zakończone: 9
-
-sekunda: 13
-
-przetwarzane: 1
-
-processor 0: 
-processor 1: 
-processor 2:  [7 l2 s5] 15 
-processor 3: 
-
-number of processors: 4
-
-liczba tasków: 0
-
-zakończone: 9
-
-sekunda: 14
-
-przetwarzane: 1
-
-processor 0: 
-processor 1: 
-processor 2:  [7 l1 s5] 15 
-processor 3: 
-
-number of processors: 4
-
-liczba tasków: 0
-
-zakończone: 10
-
-sekunda: 15
 
 przetwarzane: 0
 
 processor 0: 
 processor 1: 
-processor 2: 
-processor 3: 

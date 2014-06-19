@@ -28,7 +28,7 @@ namespace MyChart
             {
                 Szeregowanie_zadań_na_wielu_procesorach.Task myTask = ListOfTasks[0];
 
-                int yLeftTopPoint = LeftBottomCorner.Y - (int)((float)myTask.time * yScale);
+                int yLeftTopPoint = LeftBottomCorner.Y - (int)((float)myTask.getTimeLeft() * yScale);
                 SolidBrush fillOfTaskBrush = new SolidBrush(GetColorOfTask(myTask));
 
                 int xCenter = (RightBottomCorner.X - LeftBottomCorner.X) / 2;

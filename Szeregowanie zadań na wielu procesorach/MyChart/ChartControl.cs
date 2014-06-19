@@ -148,6 +148,7 @@ namespace MyChart
             foreach (var item in ListOfTasks)
             {
                 if (item.time > max) max = item.time;
+                
             }
             return max;
         }
@@ -156,7 +157,7 @@ namespace MyChart
         {
             switch(task.priority)
                          {
-                             case Priority.Heigh:
+                             case Priority.High:
                                  {
                                      return Color.OrangeRed;
                                      
@@ -169,7 +170,7 @@ namespace MyChart
                                  {
                                      return Color.Yellow;
                                  }
-                             case Priority.VeryHeigh:
+                             case Priority.VeryHigh:
                                  {
                                      return Color.Red;
                                  }

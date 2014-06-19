@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Szeregowanie_zadań_na_wielu_procesorach
 {
-    public enum Priority { VeryLow, Low, Medium, Heigh, VeryHeigh };
+    public enum Priority { VeryLow, Low, Medium, High, VeryHigh };
 
     public class Task : IEquatable<Task>, IComparable<Task>
     {

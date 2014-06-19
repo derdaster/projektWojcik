@@ -1,0 +1,7 @@
+#Pierwsza linia-liczba procesorów
+#Druga i kolejne, odpowiednio czas zadania, priorytet(1-5) czyli(Highest-Lowest), czas wejœcia na procesor
+2
+19	2	0
+8	3	0
+5	2	10
+10	3	0

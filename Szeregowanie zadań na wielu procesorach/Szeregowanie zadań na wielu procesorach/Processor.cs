@@ -32,7 +32,7 @@ namespace Szeregowanie_zadań_na_wielu_procesorach
             return taskList;
         }
 
-        internal void setTaskList(List<Task> allTasksForSingleProcessor)
+        public void setTaskList(List<Task> allTasksForSingleProcessor)
         {
             taskList = allTasksForSingleProcessor;
         }
